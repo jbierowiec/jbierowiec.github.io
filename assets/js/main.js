@@ -223,7 +223,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const game1 = {
       en: "Sudoku Game",
       pl: "Sudoku",
-    }
+    };
+
+    // blog section
+    const blog_title = {
+      en: "Blog",
+      pl: "Blog",
+    };
+    const blog_subtitle = {
+      en: "Most recent posts",
+      pl: "Najnowsze posty",
+    };
+    const blog_title1 = {
+      en: "Hiking in Montana",
+      pl: "Wędrówka w stanie Monata",
+    };
+    const blog_desc1 = {
+      en: "My first blog post recounting my backpacking journey in Glacier National Park, MT.",
+      pl: "Mój pierwszy wpis na blogu opisujący moją wyprawę z wędrownikami do Parku Narodowego Glacier w stanie Montana.",
+    };
+    const blog_title2 = {
+      en: "From New York City to Montréal",
+      pl: "Od Nowego Jorku do Montrealu",
+    };
+    const blog_desc2 = {
+      en: "My account of completing the Empire State Trail bikepacking from New York City to Montréal.",
+      pl: "Moja relacja z ukończenia wyprawy rowerowej Empire State Trail z Nowego Jorku do Montrealu.",
+    };
+    const blog_title3 = {
+      en: "Twin Lights Ride",
+      pl: "Przejażdżka Twin Lights",
+    };
+    const blog_desc3 = {
+      en: "My account of completing the 100-mile Twin Lights Ride in New Jersey.",
+      pl: "Moja relacja z ukończenia 100-milowego rajdu Twin Lights Ride w New Jersey.",
+    };
 
     // contact section
     const contact_title = {
@@ -312,10 +346,13 @@ document.addEventListener("DOMContentLoaded", () => {
       portfolio_subtitle[lang];
 
     document.getElementById("all_filter").textContent = all_filter[lang];
-    document.getElementById("web_development_filter").textContent = web_development_filter[lang];
-    document.getElementById("web_design_filter").textContent = web_design_filter[lang];
+    document.getElementById("web_development_filter").textContent =
+      web_development_filter[lang];
+    document.getElementById("web_design_filter").textContent =
+      web_design_filter[lang];
     document.getElementById("app_filter").textContent = app_filter[lang];
-    document.getElementById("simulation_filter").textContent = simulation_filter[lang];
+    document.getElementById("simulation_filter").textContent =
+      simulation_filter[lang];
     document.getElementById("game_filter").textContent = game_filter[lang];
 
     // web development
@@ -336,12 +373,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("app2").textContent = app2[lang];
     document.getElementById("app3").textContent = app3[lang];
 
-    // simulation development 
+    // simulation development
     document.getElementById("simulation1").textContent = simulation1[lang];
 
     // game development
     document.getElementById("game1").textContent = game1[lang];
 
+    // blog section
+    document.getElementById("blog_title").textContent = blog_title[lang];
+    document.getElementById("blog_subtitle").textContent = blog_subtitle[lang];
+    document.getElementById("blog_title1").textContent = blog_title1[lang];
+    document.getElementById("blog_desc1").textContent = blog_desc1[lang];
+    document.getElementById("blog_title2").textContent = blog_title2[lang];
+    document.getElementById("blog_desc2").textContent = blog_desc2[lang];
+    document.getElementById("blog_title3").textContent = blog_title3[lang];
+    document.getElementById("blog_desc3").textContent = blog_desc3[lang];
     // contact section
     document.getElementById("contact_title").textContent = contact_title[lang];
     document.getElementById("contact_subtitle").textContent =
@@ -378,7 +424,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("click", (e) => {
-    if (!languageSelector.contains(e.target) && !languageList.contains(e.target)) {
+    if (
+      !languageSelector.contains(e.target) &&
+      !languageList.contains(e.target)
+    ) {
       languageList.classList.remove("active");
     }
   });
@@ -431,6 +480,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+});
+
+var swiper = new Swiper(".blog__container", {
+  cssMode: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
 const scriptURL =

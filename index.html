@@ -45,6 +45,9 @@
               >
             </li>
             <li class="nav__item">
+              <a href="#blog" class="nav__link" id="navBlog">Blog</a>
+            </li>
+            <li class="nav__item">
               <a href="#contact" class="nav__link" id="navContact">Contact</a>
             </li>
             <div class="language">
@@ -322,7 +325,9 @@
           >
           <span class="portfolio__item" id="web_design_filter">Web Design</span>
           <span class="portfolio__item" id="app_filter">App Development</span>
-          <span class="portfolio__item" id="simulation_filter">Simulations</span>
+          <span class="portfolio__item" id="simulation_filter"
+            >Simulations</span
+          >
           <span class="portfolio__item" id="game_filter">Game Development</span>
         </div>
 
@@ -400,7 +405,9 @@
 
           <div class="portfolio__card" data-category="web_development">
             <img src="images/ThePDFWebsite.png" alt="" class="portfolio__img" />
-            <h3 class="portfolio__title" id="web_development3">ThePDFWebsite</h3>
+            <h3 class="portfolio__title" id="web_development3">
+              ThePDFWebsite
+            </h3>
             <a
               href="https://thepdfwebsite.com"
               class="portfolio__button"
@@ -521,7 +528,9 @@
               alt=""
               class="portfolio__img"
             />
-            <h3 class="portfolio__title" id="simulation1">E&M Field Visualizer</h3>
+            <h3 class="portfolio__title" id="simulation1">
+              E&M Field Visualizer
+            </h3>
             <a
               href="assets/html/EMFieldVisualizer.html"
               class="portfolio__button"
@@ -532,6 +541,89 @@
               <i class="uil uil-arrow-right portfolio__button-icon"></i>
             </a>
           </div>
+        </div>
+      </section>
+
+      <!--==================== BLOG ====================-->
+      <section class="blog section" id="blog">
+        <h2 class="section__title" id="blog_title">Blog</h2>
+        <span class="section__subtitle" id="blog_subtitle"
+          >Most recent posts</span
+        >
+
+        <div class="blog__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!--==================== BLOG 1 ====================-->
+            <div class="blog__content grid swiper-slide">
+              <img src="/images/Montana.jpeg" alt="" class="blog__img" />
+
+              <div class="blog__data">
+                <h3 class="blog__title" id="blog_title1">Hiking in Montana</h3>
+                <p class="blog__description" id="blog_desc1">
+                  My first blog post recounting my backpacking journey in
+                  Glacier National Park, MT.
+                </p>
+                <a
+                  href="#"
+                  class="button button--flex button--small blog__button"
+                >
+                  Coming Soon
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--==================== BLOG 2 ====================-->
+            <div class="blog__content grid swiper-slide">
+              <img src="/images/NYC_Montreal.jpeg" alt="" class="blog__img" />
+
+              <div class="blog__data">
+                <h3 class="blog__title" id="blog_title2">
+                  From New York City to Montréal
+                </h3>
+                <p class="blog__description" id="blog_desc2">
+                  My account of completing the Empire State Trail bikepacking
+                  from New York City to Montréal.
+                </p>
+                <a
+                  href="#"
+                  class="button button--flex button--small blog__button"
+                >
+                  Coming Soon
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--==================== BLOG 3 ====================-->
+            <div class="blog__content grid swiper-slide">
+              <img src="/images/TwinLightsRide.png" alt="" class="blog__img" />
+
+              <div class="blog__data">
+                <h3 class="blog__title" id="blog_title3">Twin Lights Ride</h3>
+                <p class="blog__description" id="blog_desc3">
+                  My account of completing my second 100-mile bike ride on the
+                  Twin Lights Ride in New Jersey.
+                </p>
+                <a
+                  href="#"
+                  class="button button--flex button--small blog__button"
+                >
+                  Coming Soon
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-blog-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-blog-icon"></i>
+          </div>
+
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
