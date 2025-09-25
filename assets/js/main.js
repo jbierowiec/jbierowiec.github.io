@@ -80,6 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
       en: "Home",
       pl: "Strona Główna",
     };
+    const navAbout = {
+      en: "About",
+      pl: "O Mnie",
+    };
     const navSkills = {
       en: "Skills",
       pl: "Umiejętności",
@@ -106,9 +110,27 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // home section
-    const descriptions = {
+    const home_desc = {
       en: "A young developer seeking experiences in Software, Electrical, and Mechanical Engineering.",
       pl: "Młody programista poszukujący doświadczeń w dziedzinie inżynierii oprogramowania oraz inżynierii elektrycznej i mechanicznej.",
+    };
+
+    // about section
+    const about_title = {
+      en: "About Me",
+      pl: "O Mnie",
+    };
+    const about_subtitle = {
+      en: "The Real Jan",
+      pl: "Prawdziwy Janek",
+    };    
+    const about_desc1 = {
+      en: "At the ripe age of 22, I hold a Bachelor of Science in Engineering Physics and a Master of Science in Computer Science, both from Fordham University. Along my journey, I've been exposed to multiple industries, giving me experience in tutoring, teaching, educational technology, simulation development, web development, software engineering, blog writing, and creative problem solving.",
+      pl: "W wieku 22 lat uzyskałem tytuł licencjata z inżynierii fizyki oraz magistra informatyki na Uniwersytecie Fordham. W trakcie swojej kariery zetknąłem się z wieloma branżami, co dało mi doświadczenie w korepetycjach, nauczaniu, technologiach edukacyjnych, tworzeniu symulacji, tworzeniu stron internetowych, inżynierii oprogramowania, pisaniu blogów i kreatywnym rozwiązywaniu problemów.",
+    };
+    const about_desc2 = {
+      en: "In addition to building software that helps others and creates solutions to everyday challenges, I also recognize that there's a whole world beyond the screen. During my free time, I set out on adventures that reconnect me with that world—whether it's hiking through trails, backpacking into the mountains, road cycling long distances, or embarking on multi-day bikepacking journeys.",
+      pl: "Oprócz tworzenia oprogramowania, które pomaga innym i rozwiązuje codzienne problemy, zdaję sobie również sprawę, że istnieje cały świat poza ekranem. W wolnym czasie wyruszam na przygody, które pozwalają mi na nowo nawiązać z nim kontakt - czy to wędrówki szlakami, wędrówki z plecakiem po górach, długie dystanse na rowerze szosowym, czy wielodniowe wyprawy rowerowe.",
     };
 
     // skills section
@@ -255,8 +277,20 @@ document.addEventListener("DOMContentLoaded", () => {
       pl: "Przejażdżka Twin Lights",
     };
     const blog_desc3 = {
-      en: "My account of completing the 100-mile Twin Lights Ride in New Jersey.",
-      pl: "Moja relacja z ukończenia 100-milowego rajdu Twin Lights Ride w New Jersey.",
+      en: "My account of completing my third 100-mile bike ride on the Twin Lights Ride in New Jersey.",
+      pl: "Moja relacja z ukończenia mojego trzeciego 100-milowego rajdu rowerowego Twin Lights Ride w stanie New Jersey.",
+    };
+    const blog_button1 = {
+      en: "Coming Soon",
+      pl: "Już Wkrótce",
+    };
+    const blog_button2 = {
+      en: "Coming Soon",
+      pl: "Już Wkrótce",
+    };
+    const blog_button3 = {
+      en: "Coming Soon",
+      pl: "Już Wkrótce",
     };
 
     // contact section
@@ -319,6 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // navigation
     document.getElementById("navHome").textContent = navHome[lang];
+    document.getElementById("navAbout").textContent = navAbout[lang];
     document.getElementById("navSkills").textContent = navSkills[lang];
     document.getElementById("navPortfolio").textContent = navPortfolio[lang];
     document.getElementById("navContact").textContent = navContact[lang];
@@ -327,7 +362,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("navpl").textContent = navpl[lang];
 
     // home section
-    document.getElementById("description").textContent = descriptions[lang];
+    document.getElementById("home_desc").textContent = home_desc[lang];
+
+    // about section
+    document.getElementById("about_title").textContent = about_title[lang];
+    document.getElementById("about_subtitle").textContent =
+      about_subtitle[lang];
+    document.getElementById("about_desc1").textContent = about_desc1[lang];
+    document.getElementById("about_desc2").textContent = about_desc2[lang];
 
     // skills section
     document.getElementById("skills_title").textContent = skills_title[lang];
@@ -388,6 +430,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("blog_desc2").textContent = blog_desc2[lang];
     document.getElementById("blog_title3").textContent = blog_title3[lang];
     document.getElementById("blog_desc3").textContent = blog_desc3[lang];
+    document.getElementById("blog_button1").textContent = blog_button1[lang];    
+    document.getElementById("blog_button2").textContent = blog_button2[lang];  
+    document.getElementById("blog_button3").textContent = blog_button3[lang];  
+
     // contact section
     document.getElementById("contact_title").textContent = contact_title[lang];
     document.getElementById("contact_subtitle").textContent =
@@ -412,6 +458,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = new Date().getFullYear();
   }
 });
+
+function calculateAge(birthYear, birthMonth) {
+  const today = new Date();
+  let age = today.getFullYear() - birthYear;
+  if (today.getMonth() < birthMonth) {
+    age--; // birthday hasn't happened yet this year
+  }
+  return age;
+}
+
+document.getElementById("age").textContent = calculateAge(2002, 11); // December = 11
 
 document.addEventListener("DOMContentLoaded", function () {
   const languageSelector = document.getElementById("navLanguage");

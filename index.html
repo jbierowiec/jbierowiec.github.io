@@ -37,6 +37,9 @@
               <a href="#home" class="nav__link" id="navHome">Home</a>
             </li>
             <li class="nav__item">
+              <a href="#about" class="nav__link" id="navAbout">About</a>
+            </li>
+            <li class="nav__item">
               <a href="#skills" class="nav__link" id="navSkills">Skills</a>
             </li>
             <li class="nav__item">
@@ -94,7 +97,7 @@
                     height="187"
                   >
                     <image
-                      href="images/Jan_C_Bierowiec_headshot.png"
+                      href="images/home.png"
                       x="0"
                       y="0"
                       width="200"
@@ -107,7 +110,7 @@
 
             <div class="home__data">
               <h1 class="home__title">Jan C. Bierowiec</h1>
-              <p class="home__description" id="description">
+              <p class="home__description" id="home_desc">
                 A young developer seeking experiences in Software, Electrical,
                 and Mechanical Engineering.
               </p>
@@ -134,6 +137,47 @@
         </div>
       </section>
 
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+        <h2 class="section__title" id="about_title">About Me</h2>
+        <span class="section__subtitle" id="about_subtitle">The Real Jan</span>
+
+        <div class="about__container container grid">
+          <div class="about__content grid">
+            <!-- Image LEFT -->
+            <div class="about__img">
+              <img
+                src="images/about.jpeg"
+                alt="Jan C. Bierowiec"
+                class="about__photo"
+              />
+            </div>
+
+            <!-- Text RIGHT -->
+            <div class="about__data">
+              <p class="about__description" id="about_desc1">
+                At the ripe age of <span id="age"></span>, I
+                hold a Bachelor of Science in Engineering Physics and a Master
+                of Science in Computer Science, both from Fordham University.
+                Along my journey, I've been exposed to multiple industries,
+                giving me experience in tutoring, teaching, educational
+                technology, simulation development, web development, software
+                engineering, blog writing, and creative problem solving.</p>
+                <p class="about__description" id="about_desc2">
+                In addition to building software that helps others and creates
+                solutions to everyday challenges, I also recognize that there's
+                a whole world beyond the screen. During my free time, I set out
+                on adventures that reconnect me with that world—whether it's
+                hiking through trails, backpacking into the mountains, road
+                cycling long distances, or embarking on multi-day bikepacking
+                journeys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SKILLS ====================-->
       <section class="skills section" id="skills">
         <h2 class="section__title" id="skills_title">Skills</h2>
         <span class="section__subtitle" id="skills_subtitle">Technical</span>
@@ -566,6 +610,7 @@
                 <a
                   href="#"
                   class="button button--flex button--small blog__button"
+                  id="blog_button1"
                 >
                   Coming Soon
                   <i class="uil uil-arrow-right button__icon"></i>
@@ -588,6 +633,7 @@
                 <a
                   href="#"
                   class="button button--flex button--small blog__button"
+                  id="blog_button2"
                 >
                   Coming Soon
                   <i class="uil uil-arrow-right button__icon"></i>
@@ -602,12 +648,13 @@
               <div class="blog__data">
                 <h3 class="blog__title" id="blog_title3">Twin Lights Ride</h3>
                 <p class="blog__description" id="blog_desc3">
-                  My account of completing my second 100-mile bike ride on the
+                  My account of completing my third 100-mile bike ride on the
                   Twin Lights Ride in New Jersey.
                 </p>
                 <a
                   href="#"
                   class="button button--flex button--small blog__button"
+                  id="blog_button3"
                 >
                   Coming Soon
                   <i class="uil uil-arrow-right button__icon"></i>
