@@ -328,6 +328,10 @@ document.addEventListener("DOMContentLoaded", () => {
       en: "Home",
       pl: "Strona Główna",
     };
+    const footer_about = {
+      en: "About Me",
+      pl: "O Mnie",
+    };
     const footer_skills = {
       en: "Skills",
       pl: "Umiejętności",
@@ -448,6 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // footer section
     document.getElementById("footer_home").textContent = footer_home[lang];
+    document.getElementById("footer_about").textContent = footer_about[lang];
     document.getElementById("footer_skills").textContent = footer_skills[lang];
     document.getElementById("footer_portfolio").textContent =
       footer_portfolio[lang];
