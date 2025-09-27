@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pl: "Prawdziwy Janek",
     };    
     const about_desc1 = {
-      en: "At the ripe age of 22, I hold a Bachelor of Science in Engineering Physics and a Master of Science in Computer Science, both from Fordham University. Along my journey, I've been exposed to multiple industries, giving me experience in tutoring, teaching, educational technology, simulation development, web development, software engineering, blog writing, and creative problem solving.",
+      en: "At the age of 22, I hold a Bachelor of Science in Engineering Physics and a Master of Science in Computer Science, both from Fordham University. Along my journey, I've been exposed to multiple industries, giving me experience in tutoring, teaching, educational technology, simulation development, web development, software engineering, blog writing, and creative problem solving.",
       pl: "W wieku 22 lat uzyskałem tytuł licencjata z inżynierii fizyki oraz magistra informatyki na Uniwersytecie Fordham. W trakcie swojej kariery zetknąłem się z wieloma branżami, co dało mi doświadczenie w korepetycjach, nauczaniu, technologiach edukacyjnych, tworzeniu symulacji, tworzeniu stron internetowych, inżynierii oprogramowania, pisaniu blogów i kreatywnym rozwiązywaniu problemów.",
     };
     const about_desc2 = {

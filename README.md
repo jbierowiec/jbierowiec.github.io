@@ -4,7 +4,7 @@ This is the source code for my personal website. It is a static, single-page web
 
 ## Overview
 
-This website is designed to be simple, responsive, and visually appealing. It features different sections including a brief introduction, skills, portfolio, and contact information. The website is optimized for performance and accessibility, ensuring a seamless experience across all devices.
+This website is designed to be simple, responsive, and visually appealing. It features different sections including a brief introduction, about, skills, portfolio, blog, and contact information. The website is optimized for performance and accessibility, ensuring a seamless experience across all devices.
 
 ## Features
 
@@ -31,16 +31,32 @@ This website is designed to be simple, responsive, and visually appealing. It fe
 │   └── js
 │       ├── main.js
 │       └── swiper-bundle.min.js
+├── blogs
+│   ├── blog_1.html
+│   ├── blog_2.html
+│   └── blog_3.html
 ├── images
-│   ├── MyCyberLab.png
-│   ├── Physim.png
-│   ├── PocketBookApps.png
+│   ├── about.jpeg
 │   ├── biology_definitions.png
 │   ├── construction_landing_page.png
+│   ├── E&M_Simulation.png
+│   ├── evryquiktool.png
 │   ├── github-profile-pic.png
+│   ├── home.png
 │   ├── math_proofs.png
 │   ├── micro_saas_landing_page.png
+│   ├── Montana.jpeg
+│   ├── MyCyberLab.png
+│   ├── NYC_Montreal.jpeg
+│   ├── Physim.png
+│   ├── PocketBookApps.png
 │   ├── polonia_internationalis.png
-│   └── technology_landing_page.png
+│   ├── SudokuGame.png
+│   ├── technology_landing_page.png
+│   ├── ThePDFWebsite.png
+│   └── TwinLightsRide.png
+├── googleed35eae14fe4e4dd.html
+├── robots.txt
+├── sitemap.xml
 └── index.html
 ```
