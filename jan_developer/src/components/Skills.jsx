@@ -65,7 +65,7 @@ function Logo({ src, alt }) {
         src={src}
         alt={alt}
         className="
-    h-15 w-15 object-contain
+    h-14 w-14 object-contain
     opacity-90 saturate-100
     transition duration-300
     hover:opacity-100 hover:scale-110

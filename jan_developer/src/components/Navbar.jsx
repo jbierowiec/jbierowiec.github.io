@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
-import React from "react";
+import React, { useState } from "react";
 import Button from "../ui/Button.jsx";
-import { Mail, ArrowRight } from "lucide-react";
+import { Mail, ArrowRight, Menu, X } from "lucide-react";
 import { useTheme } from "../theme/ThemeProvider.jsx";
 
 const goTo = (id) =>
@@ -12,6 +12,30 @@ const goTo = (id) =>
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
+  const [open, setOpen] = useState(false);
+
+  const NavLinks = ({ onClick }) => (
+    <>
+      {[
+        { id: "hero", label: "Home" },
+        { id: "skills", label: "Skills" },
+        { id: "projects", label: "Projects" },
+        { id: "contact", label: "Contact" },
+      ].map((l) => (
+        <button
+          key={l.id}
+          onClick={() => {
+            setOpen(false);
+            onClick?.();
+            goTo(l.id);
+          }}
+          className="px-2 py-2 text-sm text-slate-700 transition hover:text-slate-900 dark:text-white/80 dark:hover:text-white"
+        >
+          {l.label}
+        </button>
+      ))}
+    </>
+  );
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-slate-950/80 transition-colors duration-500">
@@ -38,21 +62,8 @@ export default function Navbar() {
         </div>
 
         {/* Center nav links */}
-        <nav className="hidden items-center gap-6 md:flex">
-          {[
-            { id: "hero", label: "Home" },
-            { id: "skills", label: "Skills" },
-            { id: "projects", label: "Projects" },
-            { id: "contact", label: "Contact" },
-          ].map((link) => (
-            <button
-              key={link.id}
-              onClick={() => goTo(link.id)}
-              className="text-sm text-slate-700 transition hover:text-slate-900 dark:text-white/80 dark:hover:text-white"
-            >
-              {link.label}
-            </button>
-          ))}
+        <nav className="hidden md:flex items-center gap-6">
+          <NavLinks />
         </nav>
 
         {/* Right section */}
@@ -110,15 +121,32 @@ export default function Navbar() {
             <Mail className="h-4 w-4" /> Hire Me
           </Button>
 
-          {/* Mobile quick nav arrow */}
-          <a
-            href="#projects"
-            className="md:hidden text-slate-700 dark:text-white/70"
+          {/* Hamburger (mobile) */}
+          <button
+            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white/80 hover:bg-white dark:border-white/10 dark:bg-white/10 dark:hover:bg-white/15"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle navigation"
+            aria-expanded={open}
           >
-            <ArrowRight className="h-5 w-5" />
-          </a>
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile sheet */}
+      {open && (
+        <div className="md:hidden border-t border-black/10 dark:border-white/10 bg-white/95 dark:bg-slate-950/95 backdrop-blur">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 py-2 flex flex-col">
+            <NavLinks onClick={() => setOpen(false)} />
+            <a
+              href="#contact"
+              className="mt-2 inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400"
+            >
+              <Mail className="h-4 w-4" /> Hire Me
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

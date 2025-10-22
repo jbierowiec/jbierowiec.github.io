@@ -152,107 +152,108 @@ export default function Projects() {
 
   return (
     <Section id="projects">
-      {/* Centered Header + Filters */}
-      <div className="flex flex-col items-center text-center space-y-6 mb-12">
-        {/* Title */}
-        <h2 className="text-4xl font-bold tracking-tight">Projects</h2>
-        <p className="max-w-2xl text-slate-700 dark:text-white/70">
-          Filter by domain and search. Cards include a quick preview, tags, and
-          links.
-        </p>
+      <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        {/* Header + Filters */}
+        <div className="flex flex-col items-center text-center space-y-6 mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            Projects
+          </h2>
+          <p className="max-w-2xl text-slate-700 dark:text-white/70 text-sm sm:text-base">
+            Filter by domain and search. Cards include a preview, tags, and
+            links.
+          </p>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-3">
-          {CATEGORIES.map((c) => (
-            <button
-              key={c}
-              onClick={() => setFilter(c)}
-              className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
-                filter === c
-                  ? "bg-indigo-600 text-white shadow-sm scale-105"
-                  : "text-slate-700 hover:bg-slate-200 dark:text-white/80 dark:hover:bg-white/10"
-              }`}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-
-        {/* Search Bar */}
-        <div className="relative w-full max-w-sm">
-          <Filter className="absolute left-3 top-2.5 h-4 w-4 text-slate-500 dark:text-white/60" />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search projects..."
-            className="w-full rounded-full border border-slate-300 bg-white/70 py-2 pl-9 pr-3 text-sm placeholder-slate-400 focus:border-indigo-500 focus:outline-none dark:border-white/10 dark:bg-white/10 dark:text-white dark:placeholder-white/50"
-          />
-        </div>
-      </div>
-
-      {/* Project Grid */}
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((p, i) => (
-          <motion.article
-            key={p.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="group relative rounded-2xl overflow-hidden p-5 border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-[#0b1120] dark:border-white/10"
-          >
-            {/* Thumbnail */}
-            <div className="overflow-hidden rounded-lg mb-4">
-              <img
-                src={p.thumb}
-                alt={p.title}
-                className="w-full h-48 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-
-            {/* Project Info */}
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-              {p.title}
-            </h3>
-            <p className="text-sm text-slate-600 dark:text-white/70 mb-3">
-              {p.blurb}
-            </p>
-
-            {/* Tags */}
-            <div className="flex flex-wrap justify-center gap-2 mb-3">
-              {p.tags.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border border-slate-300 bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/80"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-
-            {/* Links */}
-            <div className="flex justify-center gap-4">
-              <a
-                href={p.links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
+          {/* Filters (wrap nicely on mobile) */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            {CATEGORIES.map((c) => (
+              <button
+                key={c}
+                onClick={() => setFilter(c)}
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
+                  filter === c
+                    ? "bg-indigo-600 text-white shadow-sm scale-105"
+                    : "text-slate-700 hover:bg-slate-200 dark:text-white/80 dark:hover:bg-white/10"
+                }`}
               >
-                Live
-              </a>
-              {p.links.code && (
+                {c}
+              </button>
+            ))}
+          </div>
+
+          {/* Search */}
+          <div className="relative w-full max-w-sm">
+            <Filter className="absolute left-3 top-2.5 h-4 w-4 text-slate-500 dark:text-white/60" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search projects..."
+              className="w-full rounded-full border border-slate-300 bg-white/70 py-2 pl-9 pr-3 text-sm placeholder-slate-400 focus:border-indigo-500 focus:outline-none dark:border-white/10 dark:bg-white/10 dark:text-white dark:placeholder-white/50"
+            />
+          </div>
+        </div>
+
+        {/* Cards grid: 1 → 2 → 3 columns */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((p, i) => (
+            <motion.article
+              key={p.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="group relative rounded-2xl overflow-hidden p-5 border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-[#0b1120] dark:border-white/10"
+            >
+              <div className="overflow-hidden rounded-lg mb-4">
+                <img
+                  src={p.thumb}
+                  alt={p.title}
+                  className="w-full h-48 object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+                {p.title}
+              </h3>
+              {p.blurb && (
+                <p className="text-sm text-slate-600 dark:text-white/70 mb-3">
+                  {p.blurb}
+                </p>
+              )}
+
+              <div className="flex flex-wrap justify-center gap-2 mb-3">
+                {p.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-slate-300 bg-slate-100 px-3 py-1 text-xs text-slate-700 dark:border-white/10 dark:bg-white/10 dark:text-white/80"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex justify-center gap-4">
                 <a
-                  href={p.links.code}
+                  href={p.links.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-600 dark:text-white/70 hover:underline"
+                  className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
-                  Code
+                  Live
                 </a>
-              )}
-            </div>
-          </motion.article>
-        ))}
+                {p.links.code && (
+                  <a
+                    href={p.links.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-slate-600 dark:text-white/70 hover:underline"
+                  >
+                    Code
+                  </a>
+                )}
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
     </Section>
   );
