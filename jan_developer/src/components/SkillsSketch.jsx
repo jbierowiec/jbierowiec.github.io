@@ -1,4 +1,3 @@
-// src/components/SkillsSketch.jsx
 import React, { useMemo, useRef } from "react";
 import Sketch from "react-p5";
 

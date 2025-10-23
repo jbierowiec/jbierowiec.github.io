@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React from "react";
 import Section from "../ui/Section.jsx";
 import Button from "../ui/Button.jsx";

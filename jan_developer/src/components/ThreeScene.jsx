@@ -51,14 +51,13 @@ export default function ThreeScene() {
         relative w-full overflow-hidden
         rounded-3xl border border-black/10 bg-white p-2 shadow-2xl
         dark:border-white/10 dark:bg-[#0b1120] transition-colors duration-500
-        /* ✅ Adaptive aspect ratio instead of fixed heights */
+
         aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9]
         touch-pan-y
       "
       aria-label="Interactive 3D preview"
       role="img"
     >
-      {/* ✅ Make Canvas truly fill its parent box */}
       <Canvas
         camera={{ position: [2.8, 2.4, 3.2], fov: 50 }}
         shadows

@@ -1,13 +1,8 @@
-// src/components/Projects.jsx
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Button from "../ui/Button.jsx";
 import Section from "../ui/Section.jsx";
 import { Filter, Globe } from "lucide-react";
-
-// NOTE: keep your existing PROJECTS array with `category: string[]`.
-// Example:
-// { id: "sudoku-game", title: "Sudoku Game", category: ["Web Development","Game Development"], ... }
 
 const PROJECTS = [
   {
@@ -22,7 +17,7 @@ const PROJECTS = [
     id: "sudoku-game",
     title: "Sudoku Game",
     tags: ["HTML5", "CSS3", "JavaScript", "SQL"],
-    category: ["Web Development", "Game Development"], // ← multi-category
+    category: ["Web Development", "Game Development"], 
     links: { live: "https://sudokubros.up.railway.app" },
     thumb: "/thumbs/SudokuGame.png",
   },

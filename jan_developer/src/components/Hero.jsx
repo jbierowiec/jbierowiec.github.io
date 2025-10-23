@@ -15,7 +15,6 @@ export default function Hero() {
       id="hero"
       className="pt-24 sm:pt-28 lg:pt-32 bg-white dark:bg-[#0b1120] transition-colors duration-500"
     >
-      {/* ✅ Proper responsive container + min-w-0 to stop grid overflow */}
       <div className="mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid min-w-0 items-center gap-8 sm:gap-10 lg:gap-14 md:grid-cols-2">
           {/* Text column */}
