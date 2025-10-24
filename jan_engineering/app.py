@@ -9,22 +9,22 @@ app.secret_key = "change-this-in-production"
 # ---- SAMPLE DATA (edit freely) ----
 PROJECTS = [
     {
-        "title": "Control System Simulator",
-        "image": "img/placeholder_project.jpg",
-        "description": "PID and state-space playground with step response and root locus.",
-        "tech": ["C++", "Qt", "Matplotlib", "WASM"]
+        "title": "Arduino Course",
+        "image": "https://placehold.co/800x500/e6e6e6/4e4e4e?text=Arduino+Course",
+        "description": "Comprehensive multi-lesson Arduino course covering circuits, code, sensors, and real-world engineering applications.",
+        "tech": ["Arduino", "C++", "TinkerCAD", "Breadboard", "Sensors"]
     },
     {
-        "title": "GPX Elevation Visualizer",
-        "image": "img/placeholder_project.jpg",
-        "description": "Upload GPX → dynamic charts, gradients, and segment analytics.",
-        "tech": ["Python", "Flask", "D3.js"]
+        "title": "Robot Map and Tracking",
+        "image": "https://placehold.co/800x500/e6e6e6/4e4e4e?text=Robot+Map+and+Tracking",
+        "description": "Robot tracking and mapping system with position updates, real-time coordinate plotting, and autonomous navigation.",
+        "tech": ["ROS", "Python", "Raspberry Pi", "LIDAR", "Mapping"]
     },
     {
-        "title": "Sudoku Web App",
-        "image": "img/placeholder_project.jpg",
-        "description": "Name-based personalization, timer, leaderboard, and rewards.",
-        "tech": ["React", "Firebase", "Bootstrap"]
+        "title": "Arduino Solar Tracker",
+        "image": "https://placehold.co/800x500/e6e6e6/4e4e4e?text=Arduino+Solar+Tracker",
+        "description": "Dual-axis solar tracker built with Arduino and servo motors to follow sunlight using LDR sensors.",
+        "tech": ["Arduino", "C++", "Solar Sensors", "Servos", "Embedded Systems"]
     }
 ]
 
