@@ -1,0 +1,166 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- HERO / 3D CAR (full page) -->
+<section id="hero" class="section-viewport d-flex align-items-center">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-gray-10 mb-3">
+          3D Design • Manufacturing • Electronics • Robotics
+        </h1>
+        <p class="lead text-gray-8">
+          Explore 3D Models I have made, Projects I have worked on, Skills that
+          I have mastered, and my Current work.
+        </p>
+        <a href="#projects" class="btn btn-outline-secondary btn-pill"
+          >See Projects ↓</a
+        >
+      </div>
+      <div class="col-lg-6">
+        <div class="card gray-card p-2 shadow-gear">
+          <div
+            id="car3d-container"
+            class="car3d-container"
+            data-model="{{ url_for('static', filename='models/polski_fiat.glb') }}"
+          >
+            <canvas id="car3d"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS (full page) -->
+<section id="projects" class="section-viewport d-flex align-items-center">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-gray-10">Featured Projects</h2>
+    <div class="row g-4">
+      {% for p in projects %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card gray-card h-100 hover-raise">
+          <img
+            class="card-img-top"
+            src="{{ url_for('static', filename=p.image) }}"
+            alt="{{ p.title }}"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-gray-10">{{ p.title }}</h5>
+            <p class="card-text text-gray-8 flex-grow-1">{{ p.description }}</p>
+            <div class="tech-chips">
+              {% for t in p.tech %}
+              <span class="chip">{{ t }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS (full page) -->
+<section id="skills" class="section-viewport d-flex align-items-center">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-gray-10">Skills & Tooling</h2>
+    <div class="row g-4">
+      {% for s in skills %}
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="skill-tile gray-card p-3 text-center hover-raise">
+          <img
+            src="https://cdn.simpleicons.org/{{ s.slug }}"
+            class="skill-icon"
+            alt="{{ s.name }}"
+            loading="lazy"
+          />
+          <div class="small mt-2 text-gray-9">{{ s.name }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CURRENT CAD WORK (full page) -->
+<section id="current" class="section-viewport d-flex align-items-center">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-gray-10">Current Work (CAD)</h2>
+    <div class="row g-4">
+      {% for w in current_work %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card gray-card h-100 hover-raise">
+          <img
+            class="card-img-top"
+            src="{{ url_for('static', filename=w.image) }}"
+            alt="{{ w.title }}"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-gray-10">{{ w.title }}</h5>
+            <p class="card-text text-gray-8 flex-grow-1">{{ w.description }}</p>
+            <div class="tech-chips">
+              {% for t in w.tech %}
+              <span class="chip">{{ t }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (full page) -->
+<section id="contact" class="section-viewport d-flex align-items-center">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-gray-10">Contact</h2>
+
+    {% with msgs = get_flashed_messages(with_categories=true) %} {% if msgs %}
+    {% for cat, msg in msgs %}
+    <div
+      class="alert alert-{{ 'danger' if cat == 'error' else 'success' }} gray-alert"
+      role="alert"
+    >
+      {{ msg }}
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <form method="POST" action="{{ url_for('contact') }}" class="gray-form">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label text-gray-9">Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control gray-input"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label text-gray-9">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control gray-input"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label class="form-label text-gray-9">Message</label>
+          <textarea
+            name="message"
+            rows="5"
+            class="form-control gray-input"
+            required
+          ></textarea>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-secondary btn-pill" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
