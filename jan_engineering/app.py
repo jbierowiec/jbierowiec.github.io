@@ -9,49 +9,88 @@ app.secret_key = "change-this-in-production"
 # ---- SAMPLE DATA (edit freely) ----
 PROJECTS = [
     {
-        "title": "Arduino Course",
-        "image": "https://placehold.co/800x500/e6e6e6/4e4e4e?text=Arduino+Course",
-        "description": "Comprehensive multi-lesson Arduino course covering circuits, code, sensors, and real-world engineering applications.",
-        "tech": ["Arduino", "C++", "TinkerCAD", "Breadboard", "Sensors"]
+        "title": "Autonomous Object-Tracking Robot",
+        "description": (
+            "A ROS-powered turtle robot that tracks and follows colored boxes using Python-based "
+            "object recognition and mapping algorithms for sequential navigation and collision avoidance."
+        ),
+        "tech": ["ROS", "Python", "OpenCV", "Simulation", "Object Tracking"],
+        "image": "img/projects/object_tracking_robot.jpg"
     },
     {
-        "title": "Robot Map and Tracking",
-        "image": "https://placehold.co/800x500/e6e6e6/4e4e4e?text=Robot+Map+and+Tracking",
-        "description": "Robot tracking and mapping system with position updates, real-time coordinate plotting, and autonomous navigation.",
-        "tech": ["ROS", "Python", "Raspberry Pi", "LIDAR", "Mapping"]
+        "title": "Dual-Axis Solar Tracker",
+        "description": (
+            "An Arduino-controlled solar tracker using servo motors and light sensors to dynamically adjust "
+            "panel orientation. Designed and modeled mechanical components in CAD, improving solar efficiency "
+            "through automated tracking."
+        ),
+        "tech": ["Arduino", "C++", "Servo Motors", "Sensors", "SolidWorks"],
+        "image": "img/projects/solar_tracker.jpg"
     },
     {
-        "title": "Arduino Solar Tracker",
-        "image": "https://placehold.co/800x500/e6e6e6/4e4e4e?text=Arduino+Solar+Tracker",
-        "description": "Dual-axis solar tracker built with Arduino and servo motors to follow sunlight using LDR sensors.",
-        "tech": ["Arduino", "C++", "Solar Sensors", "Servos", "Embedded Systems"]
+        "title": "Electromagnetic Field Visualizer",
+        "description": (
+            "A C++-based GUI simulator modeling electric field vectors and voltage distributions "
+            "based on charge placement. Converted to WebAssembly and integrated with JavaScript "
+            "for real-time, interactive visualization directly in the browser."
+        ),
+        "tech": ["C++", "WebAssembly", "JavaScript", "HTML/CSS", "GUI", "Physics Simulation"],
+        "image": "img/projects/emfield.jpg"
     }
 ]
+
 
 CURRENT_WORK = [
     {
-        "title": "CAD: Bike Telemetry Enclosure",
-        "image": "img/placeholder_work.jpg",
-        "description": "Fusion 360 case with gasket channel and PCB standoffs.",
-        "tech": ["Fusion 360", "3D Printing", "PCB"]
+        "title": "I2C Bitbang Project (TinkerCAD)",
+        "description": (
+            "Simulated I2C communication using PCF8574 I/O expander and Arduino Uno in TinkerCAD. "
+            "Implemented bit-banging logic to control 4 LEDs and read 4 buttons without using the Wire library."
+        ),
+        "tech": ["Arduino", "C++", "I2C", "TinkerCAD", "PCF8574"],
+        "image": "img/projects/i2c_bitbang.jpg"
     },
     {
-        "title": "Robot Arm End-Effector",
-        "image": "img/placeholder_work.jpg",
-        "description": "Lightweight aluminum claw with servo mount and cable routing.",
-        "tech": ["Revit", "AutoCAD", "ROS"]
-    }
+        "title": "FusionBoy 3D Modeling & Prototyping",
+        "description": (
+            "Freelance 3D modeling service delivering CAD designs and physical prototypes for "
+            "engineering and architectural applications. Created assemblies and parts using "
+            "Fusion 360, SolidWorks, and Revit; optimized designs for manufacturability and durability."
+        ),
+        "tech": ["Fusion 360", "SolidWorks", "AutoCAD", "Revit", "3D Printing"],
+        "image": "img/projects/fusionboy.jpg"
+    },
+    {
+        "title": "3D-Metal Printed Chess Set",
+        "image": "img/projects/chess_set.jpg",
+        "description": (
+            "Custom chess set designed in Fusion 360 and precision-milled using a HAAS CNC metal machine. "
+            "Each piece optimized for weight balance, tool-path efficiency, and post-processing polish to "
+            "demonstrate hybrid CAD-to-manufacturing workflow."
+        ),
+        "tech": ["Fusion 360", "HAAS CNC", "Metal 3D Printing", "CAM Toolpathing", "Manufacturing Design"]
+    },
+    {
+        "title": "Bike Ringer PCB + 3D-Printed Enclosure",
+        "image": "img/projects/bike_ringer.jpg",
+        "description": (
+            "Custom PCB-based bicycle ringer integrating an LED headlight and a buzzer circuit to emit light "
+            "and sound simultaneously. Designed the PCB layout and 3D-printed an ergonomic enclosure using "
+            "PLA plastic for handlebar mounting and weather resistance."
+        ),
+        "tech": ["PCB Design", "Arduino", "3D Printing", "Embedded Systems", "Circuit Design"]
+    },
 ]
 
 SKILLS = [
+    {"name": "AutoCAD",        "slug": "autocad"},
     {"name": "Autodesk Revit", "slug": "autodeskrevit"},
     {"name": "Tinkercad",      "slug": "tinkercad"},
-    {"name": "AutoCAD",        "slug": "autocad"},
-    {"name": "Fusion 360",     "slug": "autodeskfusion360"},
+    {"name": "SolidWorks",      "slug": "dassaultsystemes"},    
     {"name": "ROS",            "slug": "ros"},
     {"name": "Arduino",        "slug": "arduino"},
     {"name": "Raspberry Pi",   "slug": "raspberrypi"},
-    {"name": "C (Embedded)",   "slug": "c"},
+    {"name": "C",              "slug": "c"},
 ]
 
 # ---- ROUTES ----
