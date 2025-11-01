@@ -201,11 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // contact section
     const contact_title = {
       en: "Contact Me",
-      pl: "Skontaktuj się ze Mną",
+      pl: "Skontaktuj Się",
     };
     const contact_subtitle = {
       en: "Get in Touch",
-      pl: "Skontaktuj Się",
+      pl: "Skontaktuj Się ze Mną",
     };
     const contact_name = {
       en: "Name",
