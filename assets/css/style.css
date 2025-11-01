@@ -477,6 +477,30 @@ img {
   font-size: 1.25rem;
 }
 
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.icon-circle {
+  background-color: #5c5866;
+  color: white;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+  color: black;
+}
+
 /*==================== ABOUT ====================*/
 .about__container {
   gap: 1rem;

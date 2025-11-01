@@ -81,20 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
       pl: "Strona Główna",
     };
     const navAbout = {
-      en: "About",
+      en: "About Me",
       pl: "O Mnie",
     };
-    const navSkills = {
-      en: "Skills",
-      pl: "Umiejętności",
-    };
     const navPortfolio = {
-      en: "Portfolio",
-      pl: "Portfolio",
+      en: "What I Do",
+      pl: "Co Robię",
+    };
+    const navBlog = {
+      en: "My Blog",
+      pl: "Mój Blog",
     };
     const navContact = {
-      en: "Contact",
-      pl: "Kontakt",
+      en: "Contact Me",
+      pl: "Skontaktuj Się",
     };
     const navLanguage = {
       en: "Language",
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const about_subtitle = {
       en: "The Real Jan",
       pl: "Prawdziwy Janek",
-    };    
+    };
     const about_desc1 = {
       en: "At the age of 22, I hold a Bachelor of Science in Engineering Physics and a Master of Science in Computer Science, both from Fordham University. Along my journey, I've been exposed to multiple industries, giving me experience in tutoring, teaching, educational technology, simulation development, web development, software engineering, blog writing, and creative problem solving.",
       pl: "W wieku 22 lat uzyskałem tytuł licencjata z inżynierii fizyki oraz magistra informatyki na Uniwersytecie Fordham. W trakcie swojej kariery zetknąłem się z wieloma branżami, co dało mi doświadczenie w korepetycjach, nauczaniu, technologiach edukacyjnych, tworzeniu symulacji, tworzeniu stron internetowych, inżynierii oprogramowania, pisaniu blogów i kreatywnym rozwiązywaniu problemów.",
@@ -133,124 +133,29 @@ document.addEventListener("DOMContentLoaded", () => {
       pl: "Oprócz tworzenia oprogramowania, które pomaga innym i rozwiązuje codzienne problemy, zdaję sobie również sprawę, że istnieje cały świat poza ekranem. W wolnym czasie wyruszam na przygody, które pozwalają mi na nowo nawiązać z nim kontakt - czy to wędrówki szlakami, wędrówki z plecakiem po górach, długie dystanse na rowerze szosowym, czy wielodniowe wyprawy rowerowe.",
     };
 
-    // skills section
-    const skills_title = {
-      en: "Skills",
-      pl: "Umiejętności",
-    };
-    const skills_subtitle = {
-      en: "Technical",
-      pl: "Techniczne",
-    };
-    const web_dev = {
-      en: "Web Development",
-      pl: "Oprogramowanie Stron Internetowych",
-    };
-    const prog_tool = {
-      en: "Programming & tools",
-      pl: "Programowanie i narzędzia rozwojowe",
-    };
-    const graph_desgn = {
-      en: "Graphic Design",
-      pl: "Grafika Komputerowa",
-    };
-    const app_dev = {
-      en: "App Development",
-      pl: "Rozwój Aplikacji",
-    };
-    const robotics = {
-      en: "Robotics",
-      pl: "Robotyka",
-    };
-
     // portfolio section
     const portfolio_title = {
-      en: "Portfolio",
-      pl: "Portfolio",
+      en: "What I Do",
+      pl: "Co Robię",
     };
     const portfolio_subtitle = {
-      en: "Most Recent Work",
-      pl: "Najnowsza Praca",
+      en: "My Work & Hobbies",
+      pl: "Moja Praca i Hobby",
     };
 
-    const all_filter = {
-      en: "All",
-      pl: "Wszystko",
+    const work1 = {
+      en: "Academia",
+      pl: "Akademia",
     };
-    const web_development_filter = {
-      en: "Web Development",
-      pl: "Opracowane Strony Internetowe",
-    };
-    const web_design_filter = {
-      en: "Web Design",
-      pl: "Zaprojektowane Strony Internetowe",
-    };
-    const app_filter = {
-      en: "App Development",
-      pl: "Opracowane Aplikacje",
-    };
-    const simulation_filter = {
-      en: "Simulations",
-      pl: "Symulacje",
-    };
-    const game_filter = {
-      en: "Game Development",
-      pl: "Rozwój Gier",
-    };
-
-    const web_development1 = {
-      en: "Physim",
-      pl: "Physim",
-    };
-    const web_development2 = {
-      en: "PocketBookApps",
-      pl: "PocketBookApps",
-    };
-    const web_development3 = {
-      en: "MyCyberLab",
-      pl: "MyCyberLab",
-    };
-
-    const web_design1 = {
-      en: "Micro SaaS Landing Page",
-      pl: "Strona Docelowa Dirmy Micro SaaS",
-    };
-    const web_design2 = {
-      en: "Technology Landing Page",
-      pl: "Strona Docelowa Firmy Technologicznej",
-    };
-    const web_design3 = {
-      en: "Construction Landing Page",
-      pl: "Strona Docelowa Firmy Budowlanej",
-    };
-
-    const app1 = {
-      en: "Mathematical Proofs",
-      pl: "Dowody Matematyczne",
-    };
-    const app2 = {
-      en: "Biology Definitions",
-      pl: "Definicje Biologiczne",
-    };
-    const app3 = {
-      en: "Polonia Internationalis",
-      pl: "Polonia Internationalis",
-    };
-
-    const simulation1 = {
-      en: "E&M Field Visualizer",
-      pl: "Wizualizator Pola E&M",
-    };
-
-    const game1 = {
-      en: "Sudoku Game",
-      pl: "Sudoku",
+    const work2 = {
+      en: "Technology",
+      pl: "Technologia",
     };
 
     // blog section
     const blog_title = {
-      en: "Blog",
-      pl: "Blog",
+      en: "My Blog",
+      pl: "Mój Blog",
     };
     const blog_subtitle = {
       en: "Most recent posts",
@@ -332,21 +237,17 @@ document.addEventListener("DOMContentLoaded", () => {
       en: "About Me",
       pl: "O Mnie",
     };
-    const footer_skills = {
-      en: "Skills",
-      pl: "Umiejętności",
-    };
     const footer_portfolio = {
-      en: "Portfolio",
-      pl: "Portfolio",
+      en: "What I Do",
+      pl: "Co Robię",
     };
     const footer_blog = {
-      en: "Blog",
-      pl: "Blog",
+      en: "My Blog",
+      pl: "Mój Blog",
     };
     const footer_contact = {
-      en: "Contact",
-      pl: "Kontakt",
+      en: "Contact Me",
+      pl: "Skontaktuj Się",
     };
     const legal_ending = {
       en: "&#169; Jan C. Bierowiec <span id='year'></span> All Rights Reserved",
@@ -358,8 +259,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // navigation
     document.getElementById("navHome").textContent = navHome[lang];
     document.getElementById("navAbout").textContent = navAbout[lang];
-    document.getElementById("navSkills").textContent = navSkills[lang];
     document.getElementById("navPortfolio").textContent = navPortfolio[lang];
+    document.getElementById("navBlog").textContent = navBlog[lang];
     document.getElementById("navContact").textContent = navContact[lang];
     document.getElementById("navLanguage").textContent = navLanguage[lang];
     document.getElementById("naven").textContent = naven[lang];
@@ -375,55 +276,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("about_desc1").textContent = about_desc1[lang];
     document.getElementById("about_desc2").textContent = about_desc2[lang];
 
-    // skills section
-    document.getElementById("skills_title").textContent = skills_title[lang];
-    document.getElementById("skills_subtitle").textContent =
-      skills_subtitle[lang];
-    document.getElementById("web_dev").textContent = web_dev[lang];
-    document.getElementById("prog_tool").textContent = prog_tool[lang];
-    document.getElementById("graph_desgn").textContent = graph_desgn[lang];
-    document.getElementById("app_dev").textContent = app_dev[lang];
-    document.getElementById("robotics").textContent = robotics[lang];
-
     // portfolio section
     document.getElementById("portfolio_title").textContent =
       portfolio_title[lang];
     document.getElementById("portfolio_subtitle").textContent =
       portfolio_subtitle[lang];
 
-    document.getElementById("all_filter").textContent = all_filter[lang];
-    document.getElementById("web_development_filter").textContent =
-      web_development_filter[lang];
-    document.getElementById("web_design_filter").textContent =
-      web_design_filter[lang];
-    document.getElementById("app_filter").textContent = app_filter[lang];
-    document.getElementById("simulation_filter").textContent =
-      simulation_filter[lang];
-    document.getElementById("game_filter").textContent = game_filter[lang];
-
-    // web development
-    document.getElementById("web_development1").textContent =
-      web_development1[lang];
-    document.getElementById("web_development2").textContent =
-      web_development2[lang];
-    document.getElementById("web_development3").textContent =
-      web_development3[lang];
-
-    // web design
-    document.getElementById("web_design1").textContent = web_design1[lang];
-    document.getElementById("web_design2").textContent = web_design2[lang];
-    document.getElementById("web_design3").textContent = web_design3[lang];
-
-    // app development
-    document.getElementById("app1").textContent = app1[lang];
-    document.getElementById("app2").textContent = app2[lang];
-    document.getElementById("app3").textContent = app3[lang];
-
-    // simulation development
-    document.getElementById("simulation1").textContent = simulation1[lang];
-
-    // game development
-    document.getElementById("game1").textContent = game1[lang];
+    // work & hobbies
+    document.getElementById("work1").textContent = work1[lang];
+    document.getElementById("work2").textContent = work2[lang];
 
     // blog section
     document.getElementById("blog_title").textContent = blog_title[lang];
@@ -434,9 +295,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("blog_desc2").textContent = blog_desc2[lang];
     document.getElementById("blog_title3").textContent = blog_title3[lang];
     document.getElementById("blog_desc3").textContent = blog_desc3[lang];
-    document.getElementById("blog_button1").textContent = blog_button1[lang];    
-    document.getElementById("blog_button2").textContent = blog_button2[lang];  
-    document.getElementById("blog_button3").textContent = blog_button3[lang];  
+    document.getElementById("blog_button1").textContent = blog_button1[lang];
+    document.getElementById("blog_button2").textContent = blog_button2[lang];
+    document.getElementById("blog_button3").textContent = blog_button3[lang];
 
     // contact section
     document.getElementById("contact_title").textContent = contact_title[lang];
@@ -453,7 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // footer section
     document.getElementById("footer_home").textContent = footer_home[lang];
     document.getElementById("footer_about").textContent = footer_about[lang];
-    document.getElementById("footer_skills").textContent = footer_skills[lang];
     document.getElementById("footer_portfolio").textContent =
       footer_portfolio[lang];
     document.getElementById("footer_blog").textContent = footer_blog[lang];
@@ -510,36 +370,6 @@ document.addEventListener("DOMContentLoaded", function () {
   languageOptions.forEach(function (option) {
     option.addEventListener("click", function () {
       languageList.style.display = "none";
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const filterButtons = document.querySelectorAll(".portfolio__item");
-  const projects = document.querySelectorAll(".portfolio__card");
-
-  const categoryMap = {
-    all_filter: "all",
-    web_development_filter: "web_development",
-    web_design_filter: "web_design",
-    app_filter: "app",
-    simulation_filter: "simulation",
-    game_filter: "game",
-  };
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const category = categoryMap[button.id];
-
-      projects.forEach((project) => {
-        const categories = project.dataset.category.split(" ");
-
-        if (category === "all" || categories.includes(category)) {
-          project.style.display = "";
-        } else {
-          project.style.display = "none";
-        }
-      });
     });
   });
 });
