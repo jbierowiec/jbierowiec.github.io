@@ -28,6 +28,11 @@ This website is designed to be simple, responsive, and visually appealing. It fe
 │   ├── css
 │   │   ├── style.css
 │   │   └── swiper-bundle.min.css
+│   ├── html
+│   │   ├── EMFieldVisualizer.data
+│   │   ├── EMFieldVisualizer.html
+│   │   ├── EMFieldVisualizer.js
+│   │   └── swiper-bundle.min.wasm
 │   └── js
 │       ├── main.js
 │       └── swiper-bundle.min.js
@@ -37,26 +42,15 @@ This website is designed to be simple, responsive, and visually appealing. It fe
 │   └── blog_3.html
 ├── images
 │   ├── about.jpeg
-│   ├── biology_definitions.png
-│   ├── construction_landing_page.png
-│   ├── E&M_Simulation.png
-│   ├── evryquiktool.png
 │   ├── github-profile-pic.png
 │   ├── home.png
-│   ├── math_proofs.png
-│   ├── micro_saas_landing_page.png
+│   ├── jan_academia.png
+│   ├── jan_technology.png
 │   ├── Montana.jpeg
-│   ├── MyCyberLab.png
 │   ├── NYC_Montreal.jpeg
-│   ├── Physim.png
-│   ├── PocketBookApps.png
-│   ├── polonia_internationalis.png
-│   ├── SudokuGame.png
-│   ├── technology_landing_page.png
-│   ├── ThePDFWebsite.png
 │   └── TwinLightsRide.png
 ├── googleed35eae14fe4e4dd.html
+├── index.html
 ├── robots.txt
-├── sitemap.xml
-└── index.html
+└── sitemap.xml
 ```
