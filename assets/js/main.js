@@ -399,3 +399,45 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+/* ==================== SECTION SCROLL ANIMATIONS ==================== */
+const sectionsToAnimate = [
+  { id: "about", visibleClass: "about--visible" },
+  { id: "portfolio", visibleClass: "portfolio--visible" },
+  { id: "blog", visibleClass: "blog--visible" },
+  { id: "contact", visibleClass: "contact--visible" },
+];
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = entry.target;
+          const cls = section.dataset.visibleClass;
+          if (cls) section.classList.add(cls);
+          // animate only once
+          observer.unobserve(section);
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.25, // 25% of section in view
+    }
+  );
+
+  sectionsToAnimate.forEach((cfg) => {
+    const el = document.getElementById(cfg.id);
+    if (el) {
+      el.dataset.visibleClass = cfg.visibleClass;
+      observer.observe(el);
+    }
+  });
+} else {
+  // Fallback: just show them if IntersectionObserver isn't supported
+  sectionsToAnimate.forEach((cfg) => {
+    const el = document.getElementById(cfg.id);
+    if (el) el.classList.add(cfg.visibleClass);
+  });
+}
