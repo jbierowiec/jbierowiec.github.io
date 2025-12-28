@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // home section
     const home_desc = {
-      en: "A young developer seeking experiences in Software, Electrical, and Mechanical Engineering.",
-      pl: "Młody programista poszukujący doświadczeń w dziedzinie inżynierii oprogramowania oraz inżynierii elektrycznej i mechanicznej.",
+      en: "A young interdisciplinary engineer, with a focus on educational technology, mechatronics, and intelligent automation.",
+      pl: "Młody inżynier o interdyscyplinarnym podejściu, specjalizującym się w technologiach edukacyjnych, mechatronice i inteligentnej automatyce.",
     };
 
     // about section
