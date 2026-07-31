@@ -81,9 +81,6 @@
               >
             </li>
             <li class="nav__item">
-              <a href="#blog" class="nav__link" id="navBlog">My Blog</a>
-            </li>
-            <li class="nav__item">
               <a href="#contact" class="nav__link" id="navContact"
                 >Contact Me</a
               >
@@ -243,12 +240,21 @@
 
         <div class="portfolio__container container grid">
           <div class="portfolio__card">
-            <img src="images/jan_academia.png" alt="" class="portfolio__img" />
-            <h3 class="portfolio__title" id="work1">Academia</h3>
+            <div class="portfolio__image">
+              <img
+                src="images/jan_adventures.png"
+                alt=""
+                class="portfolio__img"
+              />
+              <span class="portfolio__overlay-letter">A</span>
+            </div>
+
+            <h3 class="portfolio__title" id="work1">Adventures</h3>
             <a
-              href="https://jbierowiec.github.io/jan_academia/"
+              href="https://janeksadventures.up.railway.app"
               class="portfolio__button"
               target="_blank"
+              id="work_link1"
             >
               Live Site
               <i class="uil uil-arrow-right portfolio__button-icon"></i>
@@ -256,120 +262,63 @@
           </div>
 
           <div class="portfolio__card">
-            <img
-              src="images/jan_technology.png"
-              alt=""
-              class="portfolio__img"
-            />
-            <h3 class="portfolio__title" id="work2">Technology</h3>
-            <a
-              href="https://jbierowiec.github.io/jan_technology/"
-              class="portfolio__button"
-              target="_blank"
-            >
-              Live Site
-              <i class="uil uil-arrow-right portfolio__button-icon"></i>
-            </a>
-          </div>
-
-          <div class="portfolio__card">
-            <img src="images/jan_cycling.png" alt="" class="portfolio__img" />
+            <div class="portfolio__image">
+              <img src="images/jan_bikes.png" alt="" class="portfolio__img" />
+              <span class="portfolio__overlay-letter">C</span>
+            </div>
             <h3 class="portfolio__title" id="work2">Cycling</h3>
             <a
               href="https://janekbikes.up.railway.app"
               class="portfolio__button"
               target="_blank"
+              id="work_link2"
             >
               Live Site
               <i class="uil uil-arrow-right portfolio__button-icon"></i>
             </a>
           </div>
-        </div>
-      </section>
 
-      <!--==================== BLOG ====================-->
-      <section class="blog section" id="blog">
-        <h2 class="section__title" id="blog_title">Blog</h2>
-        <span class="section__subtitle" id="blog_subtitle"
-          >Most recent posts</span
-        >
-
-        <div class="blog__container container swiper-container">
-          <div class="swiper-wrapper">
-            <!--==================== BLOG 1 ====================-->
-            <div class="blog__content grid swiper-slide">
-              <img src="images/Montana.jpeg" alt="" class="blog__img" />
-
-              <div class="blog__data">
-                <h3 class="blog__title" id="blog_title1">Hiking in Montana</h3>
-                <p class="blog__description" id="blog_desc1">
-                  My first blog post recounting my backpacking journey in
-                  Glacier National Park, MT.
-                </p>
-                <a
-                  href="#"
-                  class="button button--flex button--small blog__button"
-                  id="blog_button1"
-                >
-                  Coming Soon
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
+          <div class="portfolio__card">
+            <div class="portfolio__image">
+              <img
+                src="images/jan_technology.png"
+                alt=""
+                class="portfolio__img"
+              />
+              <span class="portfolio__overlay-letter">T</span>
             </div>
-
-            <!--==================== BLOG 2 ====================-->
-            <div class="blog__content grid swiper-slide">
-              <img src="images/NYC_Montreal.jpeg" alt="" class="blog__img" />
-
-              <div class="blog__data">
-                <h3 class="blog__title" id="blog_title2">
-                  From New York City to Montréal
-                </h3>
-                <p class="blog__description" id="blog_desc2">
-                  My account of completing the Empire State Trail bikepacking
-                  from New York City to Montréal.
-                </p>
-                <a
-                  href="#"
-                  class="button button--flex button--small blog__button"
-                  id="blog_button2"
-                >
-                  Coming Soon
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!--==================== BLOG 3 ====================-->
-            <div class="blog__content grid swiper-slide">
-              <img src="images/TwinLightsRide.png" alt="" class="blog__img" />
-
-              <div class="blog__data">
-                <h3 class="blog__title" id="blog_title3">Twin Lights Ride</h3>
-                <p class="blog__description" id="blog_desc3">
-                  My account of completing my third 100-mile bike ride on the
-                  Twin Lights Ride in New Jersey.
-                </p>
-                <a
-                  href="#"
-                  class="button button--flex button--small blog__button"
-                  id="blog_button3"
-                >
-                  Coming Soon
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </a>
-              </div>
-            </div>
+            <h3 class="portfolio__title" id="work3">Technology</h3>
+            <a
+              href="https://jbierowiec.github.io/jan_technology/"
+              class="portfolio__button"
+              target="_blank"
+              id="work_link3"
+            >
+              Live Site
+              <i class="uil uil-arrow-right portfolio__button-icon"></i>
+            </a>
           </div>
 
-          <div class="swiper-button-next">
-            <i class="uil uil-angle-right-b swiper-blog-icon"></i>
+          <div class="portfolio__card">
+            <div class="portfolio__image">
+              <img
+                src="images/jan_academia.png"
+                alt=""
+                class="portfolio__img"
+              />
+              <span class="portfolio__overlay-letter">A</span>
+            </div>
+            <h3 class="portfolio__title" id="work4">Academia</h3>
+            <a
+              href="https://jbierowiec.github.io/jan_academia/"
+              class="portfolio__button"
+              target="_blank"
+              id="work_link4"
+            >
+              Live Site
+              <i class="uil uil-arrow-right portfolio__button-icon"></i>
+            </a>
           </div>
-          <div class="swiper-button-prev">
-            <i class="uil uil-angle-left-b swiper-blog-icon"></i>
-          </div>
-
-          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -455,9 +404,6 @@
               <a href="#portfolio" class="footer__link" id="footer_portfolio"
                 >What I Do</a
               >
-            </li>
-            <li>
-              <a href="#blog" class="footer__link" id="footer_blog">My Blog</a>
             </li>
             <li>
               <a href="#contact" class="footer__link" id="footer_contact"

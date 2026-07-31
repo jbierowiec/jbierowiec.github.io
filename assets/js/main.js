@@ -43,10 +43,10 @@ const getCurrectIcon = () =>
 
 if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
+    darkTheme,
   );
   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme
+    iconTheme,
   );
 }
 
@@ -87,10 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const navPortfolio = {
       en: "What I Do",
       pl: "Co Robię",
-    };
-    const navBlog = {
-      en: "My Blog",
-      pl: "Mój Blog",
     };
     const navContact = {
       en: "Contact Me",
@@ -144,58 +140,36 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const work1 = {
-      en: "Academia",
-      pl: "Akademia",
+      en: "Adventures",
+      pl: "Przygody",
     };
     const work2 = {
+      en: "Cycling",
+      pl: "Kolarstwo",
+    };
+    const work3 = {
       en: "Technology",
       pl: "Technologia",
     };
-
-    // blog section
-    const blog_title = {
-      en: "My Blog",
-      pl: "Mój Blog",
+    const work4 = {
+      en: "Academia",
+      pl: "Akademia",
     };
-    const blog_subtitle = {
-      en: "Most recent posts",
-      pl: "Najnowsze posty",
+    const work_link1 = {
+      en: "Live Site",
+      pl: "Żywa Strona",
     };
-    const blog_title1 = {
-      en: "Hiking in Montana",
-      pl: "Wędrówka w stanie Monata",
+    const work_link2 = {
+      en: "Live Site",
+      pl: "Żywa Strona",
     };
-    const blog_desc1 = {
-      en: "My first blog post recounting my backpacking journey in Glacier National Park, MT.",
-      pl: "Mój pierwszy wpis na blogu opisujący moją wyprawę z wędrownikami do Parku Narodowego Glacier w stanie Montana.",
+    const work_link3 = {
+      en: "Live Site",
+      pl: "Żywa Strona",
     };
-    const blog_title2 = {
-      en: "From New York City to Montréal",
-      pl: "Od Nowego Jorku do Montrealu",
-    };
-    const blog_desc2 = {
-      en: "My account of completing the Empire State Trail bikepacking from New York City to Montréal.",
-      pl: "Moja relacja z ukończenia wyprawy rowerowej Empire State Trail z Nowego Jorku do Montrealu.",
-    };
-    const blog_title3 = {
-      en: "Twin Lights Ride",
-      pl: "Przejażdżka Twin Lights",
-    };
-    const blog_desc3 = {
-      en: "My account of completing my third 100-mile bike ride on the Twin Lights Ride in New Jersey.",
-      pl: "Moja relacja z ukończenia mojego trzeciego 100-milowego rajdu rowerowego Twin Lights Ride w stanie New Jersey.",
-    };
-    const blog_button1 = {
-      en: "Coming Soon",
-      pl: "Już Wkrótce",
-    };
-    const blog_button2 = {
-      en: "Coming Soon",
-      pl: "Już Wkrótce",
-    };
-    const blog_button3 = {
-      en: "Coming Soon",
-      pl: "Już Wkrótce",
+    const work_link4 = {
+      en: "Live Site",
+      pl: "Żywa Strona",
     };
 
     // contact section
@@ -241,10 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
       en: "What I Do",
       pl: "Co Robię",
     };
-    const footer_blog = {
-      en: "My Blog",
-      pl: "Mój Blog",
-    };
     const footer_contact = {
       en: "Contact Me",
       pl: "Skontaktuj Się",
@@ -260,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("navHome").textContent = navHome[lang];
     document.getElementById("navAbout").textContent = navAbout[lang];
     document.getElementById("navPortfolio").textContent = navPortfolio[lang];
-    document.getElementById("navBlog").textContent = navBlog[lang];
     document.getElementById("navContact").textContent = navContact[lang];
     document.getElementById("navLanguage").textContent = navLanguage[lang];
     document.getElementById("naven").textContent = naven[lang];
@@ -285,19 +254,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // work & hobbies
     document.getElementById("work1").textContent = work1[lang];
     document.getElementById("work2").textContent = work2[lang];
-
-    // blog section
-    document.getElementById("blog_title").textContent = blog_title[lang];
-    document.getElementById("blog_subtitle").textContent = blog_subtitle[lang];
-    document.getElementById("blog_title1").textContent = blog_title1[lang];
-    document.getElementById("blog_desc1").textContent = blog_desc1[lang];
-    document.getElementById("blog_title2").textContent = blog_title2[lang];
-    document.getElementById("blog_desc2").textContent = blog_desc2[lang];
-    document.getElementById("blog_title3").textContent = blog_title3[lang];
-    document.getElementById("blog_desc3").textContent = blog_desc3[lang];
-    document.getElementById("blog_button1").textContent = blog_button1[lang];
-    document.getElementById("blog_button2").textContent = blog_button2[lang];
-    document.getElementById("blog_button3").textContent = blog_button3[lang];
+    document.getElementById("work3").textContent = work3[lang];
+    document.getElementById("work4").textContent = work4[lang];
+    document.getElementById("work_link1").textContent = work_link1[lang];
+    document.getElementById("work_link2").textContent = work_link2[lang];
+    document.getElementById("work_link3").textContent = work_link3[lang];
+    document.getElementById("work_link4").textContent = work_link4[lang];
 
     // contact section
     document.getElementById("contact_title").textContent = contact_title[lang];
@@ -316,7 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("footer_about").textContent = footer_about[lang];
     document.getElementById("footer_portfolio").textContent =
       footer_portfolio[lang];
-    document.getElementById("footer_blog").textContent = footer_blog[lang];
     document.getElementById("footer_contact").textContent =
       footer_contact[lang];
     document.getElementById("legal_ending").innerHTML = legal_ending[lang];
@@ -374,6 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/*
 var swiper = new Swiper(".blog__container", {
   cssMode: true,
 
@@ -386,6 +348,7 @@ var swiper = new Swiper(".blog__container", {
     clickable: true,
   },
 });
+*/
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbyI7zXIglHx9zAPdcmCJDvYXYDLTC_SglJ3qMV_LjiRha7dqRV0JevuMc5uQZ8kCoru/exec";
@@ -404,7 +367,7 @@ form.addEventListener("submit", (e) => {
 const sectionsToAnimate = [
   { id: "about", visibleClass: "about--visible" },
   { id: "portfolio", visibleClass: "portfolio--visible" },
-  { id: "blog", visibleClass: "blog--visible" },
+  //{ id: "blog", visibleClass: "blog--visible" },
   { id: "contact", visibleClass: "contact--visible" },
 ];
 
@@ -424,7 +387,7 @@ if ("IntersectionObserver" in window) {
     {
       root: null,
       threshold: 0.25, // 25% of section in view
-    }
+    },
   );
 
   sectionsToAnimate.forEach((cfg) => {
